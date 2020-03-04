@@ -1,7 +1,54 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 h2 {
   text-align: center;
+}
+
+/* Space invaders */
+.spinv {
+  position: relative;
+  background-image: url('../img/bg.png');
+  background-size: cover;
+  margin-top: 50px;
+}
+
+.spinv [class^="col-"] {
+  background: none;
+  border: none;
+}
+
+/* Overlay */
+.spinv::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #aaa;
+  opacity: 0.25;
+}
+
+img {
+  position: relative;
+  width: 100px;
+  max-width: 100%;
+}
+
+#logo {
+  width: 50%;
+  max-width: 100%;
+}
+
+.spaceship {
+  max-width: 100%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.spaceship:hover {
+  opacity: 1;
 }
